@@ -1,0 +1,22 @@
+<section>
+  <h2>What Spells doth Thine know?</h2>
+
+  <article class="new-spell-page">
+    <form class="new-spell" action="/spells" method="post">
+      <label>Name of Spell:
+        <input type="text" name="spell[name]" value="<%= @spell.try(:name) %>">
+      </label>
+
+      <label>Name thine price (lumps of gold):
+        <input type="text" name="spell[price]" value="<%= @spell.try(:price) %>">
+      </label>
+
+      <label>Casting details:
+        <textarea name="spell[description]" rows="8" cols="50">
+          <%= @spell.try(:description) %>
+        </textarea>
+      </label>
+      <input type="submit" name="submit" value="Submit ye old Spell">
+    </form><!-- end new spell form -->
+  </article><!-- end new spell page -->
+</section><!-- end section -->

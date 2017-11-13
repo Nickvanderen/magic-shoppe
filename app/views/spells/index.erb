@@ -1,0 +1,27 @@
+<section>
+  <nav id="main-nav">
+    <ul>
+      <li>
+        <a href="spells/new">Add a Spell</a>
+      </li>
+    </ul>
+  </nav>
+  <h1>Ye Old Magic Shoppe</h1>
+
+  <article class="all-spells">
+    <ul>
+      <% @spells.each do |spell| %>
+      <li>
+        <a href="spells/<%= spell.id %>"><%= spell.name %></a>
+        |
+        <a href="/spells/<%= spell.id %>/edit">edit</a>
+        |
+        <form class="delete-form" action="/spells/<%= spell.id %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" name="delete" value="remove">
+        </form>
+      </li>
+      <% end %>
+    </ul>
+  </article><!-- end all spells -->
+</section><!-- end section -->

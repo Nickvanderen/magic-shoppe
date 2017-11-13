@@ -1,0 +1,20 @@
+<section>
+  <h2>Make a change to ye Spell</h2>
+  <article class="edit-spell-page">
+    <form class="edit-spell" action="/spells/<%= @spell.id %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <label>Name of Spell:
+        <input type="text" name="spell[name]" value="<%= @spell.try(:name) %>">
+      </label>
+
+      <label>Name thine price (lumps of gold):
+        <input type="text" name="spell[price]" value="<%= @spell.try(:price) %>">
+      </label>
+
+      <label>Casting details:
+        <textarea name="spell[description]" rows="8" cols="60"><%= @spell.try(:description) %></textarea>
+      </label>
+      <input type="submit" name="submit" value="Update thine Spell">
+    </form><!-- end edit spell form -->
+  </article><!-- end edit spell page -->
+</section><!-- end section -->

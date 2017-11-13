@@ -1,0 +1,43 @@
+/* custom css styles */
+
+body, body * {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px dotted gray;
+  padding: 1.25em;
+}
+
+input {
+  display: block;
+}
+
+textarea {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.delete-form {
+  float: right;
+}
+
+.all-spells {
+  width: 50%;
+}
+
+
+.all-spells li {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
